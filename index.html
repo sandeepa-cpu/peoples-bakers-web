@@ -19,14 +19,38 @@
                      header  {
                         background: linear-gradient(to bottom, #333,#111);
                         color:white;
-                        padding: 15px 50px;
+                        padding: 1opx 50px;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         position: sticky;
                         top: 0;
                         z-index: 1000;
-                     }
+                     }  
+
+                     /* --- LOGO SECTION STRAT --- */
+                         
+                          .logo-container {
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                          }
+
+                              .site-logo {
+                                width: 50px;
+                                height: 50px;
+                                object-fit: contain;
+                                border-radius: 5px;
+                                
+                              }
+
+
+                         .logo-text {
+                            font-size: 24px;
+                            font-weight: bold;
+                            color: #ffca28;
+                            text-decoration: none;
+                         }     
 
                      .logo { font-size: 24px; font-weight: bold; color: #ffca28; }
 
@@ -87,7 +111,11 @@
 <body>
 
      <header>
-        <div class="logo">Peopels Bakers</div>
+        <div class="logo-container"><img src="logo.jpg" alt="Peopels Bakers LOGO" class="site-logo">
+               <a href="#" class="logo-text">Peopels Bakers </a>
+        
+        
+        </div>
             <nav>
                 <ul>
                     <li><a href="#">Our Legacy</a></li>
