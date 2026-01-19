@@ -1,0 +1,198 @@
+/* --- Global Settings --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* --- Navigation Bar --- */
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 70px;
+}
+
+/* 1. Logo area */
+.logo-area {
+    flex: 0 0 auto;
+}
+
+/* 2. Navigation menu */
+nav {
+    flex: 1;
+    display: flex;
+    padding-left: 250px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 25px; 
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    
+}
+
+.nav-links li a:hover {
+    color: #ffcc00;
+}
+
+/* Pushes the Order Online button to the far right */
+.nav-links li:last-child {
+    margin-left: auto;
+}
+
+/* --- Nav Logo Styling --- */
+.nav-logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+    border: 2px solid #ffcc00; 
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+    z-index: 1100;
+    transform: translateY(20px);
+    animation: floatLOGO 10s ease-in-out infinite;
+}
+
+.nav-logo:hover {
+    transform: translateY(25px) scale(1.1);
+}
+
+@keyframes floatLOGO {
+    0% { transform: translateY(20px);}
+    50% {transform: translateY(32px);}
+    100% {transform: translateY(20px);}
+}
+
+/* --- Order Button Styling --- */
+
+.cssbuttons-io-button {
+  background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  color: white;
+  font-family: inherit;
+  padding: 0.25em;
+  padding-left: 1.2em;
+  font-size: 13px;
+  border-radius: 10em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 2.4em;
+  padding-right: 3.3em;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  box-shadow: 0 0 1.6em rgba(183, 33, 255,0.3),0 0 1.6em hsla(191, 98%, 56%, 0.3);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 10em;
+  right: 0.3em;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: #B721FF;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.9);
+}
+
+
+
+
+/* --- Hero Section --- */
+.hero {
+    height: 450px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    url('https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    color: white;
+    text-align: center;
+}
+
+.hero h1 { 
+
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 55px; 
+    font-weight: 900;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 50px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.6);
+    animation: fadeInDown 1s ease-out;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* --- Content Section --- */
+.content {
+    padding: 60px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+}
